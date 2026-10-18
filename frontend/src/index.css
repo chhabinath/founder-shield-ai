@@ -1,0 +1,34 @@
+:root {
+  --bg: #0f1221;
+  --panel: #171a2e;
+  --fg: #e7e9f3;
+  --muted: #9aa0bd;
+  --accent: #5b8cff;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); }
+.app-shell { min-height: 100vh; display: flex; flex-direction: column; }
+.app-shell__header,
+.app-shell__footer {
+  padding: 1rem 1.5rem; display: flex; align-items: baseline; gap: 1rem;
+}
+.app-shell__header { border-bottom: 1px solid #2a2f4a; }
+.app-shell__footer { border-top: 1px solid #2a2f4a; color: var(--muted); margin-top: auto; }
+.app-shell__brand { font-weight: 700; }
+.app-shell__tag { color: var(--muted); font-size: 0.9rem; }
+.app-shell__main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+.landing { max-width: 640px; text-align: center; }
+.landing__title { font-size: 2rem; line-height: 1.2; }
+.landing__subtitle { color: var(--muted); font-size: 1.05rem; }
+.landing__cta,
+.state button {
+  margin-top: 1.5rem; padding: 0.75rem 1.5rem; font-size: 1rem;
+  border: none; border-radius: 8px; background: var(--accent); color: white; cursor: pointer;
+}
+.state { text-align: center; color: var(--muted); }
+.spinner {
+  display: inline-block; width: 20px; height: 20px; border: 3px solid #2a2f4a;
+  border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
